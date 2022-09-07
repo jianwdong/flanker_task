@@ -38,7 +38,7 @@ def run(exp, config) :
 
     timestamp = flashStimulus(Text("Thank you!\nYou have completed the session."))
     log.logMessage('SESS_END', timestamp)
-    print 'Experiment ran successfully.'
+    print('Experiment ran successfully.')
     clock.wait()
 
 
@@ -48,7 +48,7 @@ def flankerTask(config, video, sess, bc, clock, practice=False) :
     random.shuffle(highlow)
     flanknum = [0]*config.numone +[1]*config.numthree +[2]*config.numfive
     random.shuffle(flanknum)
-    print 'practice is '+str(practice)
+    print('practice is '+str(practice))
     if practice :
         highlow = [0]*config.numHighPractice + [1]*config.numLowPractice
         random.shuffle(highlow)
